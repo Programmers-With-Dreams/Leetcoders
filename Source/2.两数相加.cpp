@@ -15,8 +15,6 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-# include <queue>
-using namespace std;
 
 class Solution {
 public:
