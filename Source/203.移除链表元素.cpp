@@ -27,24 +27,28 @@
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-        ListNode *header = new ListNode;
-        header->next = head;
-        ListNode *prev_pointer = header, *dele_pointer = nullptr;
-        while (head){
-            if(head->val == val){ 
-                prev_pointer->next = head->next; 
-                dele_pointer = head;
-            }
-            else{ prev_pointer = head; }
-            head = head->next;
-            if (dele_pointer){ 
-                delete dele_pointer;
-                dele_pointer = nullptr; 
-            }
-        }
-        ListNode *result = header->next;
-        delete header;
-        return result;
+        // ListNode *header = new ListNode;
+        // header->next = head;
+        // ListNode *prev_pointer = header, *dele_pointer = nullptr;
+        // while (head){
+        //     if(head->val == val){ 
+        //         prev_pointer->next = head->next; 
+        //         dele_pointer = head;
+        //     }
+        //     else{ prev_pointer = head; }
+        //     head = head->next;
+        //     if (dele_pointer){ 
+        //         delete dele_pointer;
+        //         dele_pointer = nullptr; 
+        //     }
+        // }
+        // ListNode *result = header->next;
+        // delete header;
+        // return result;
+        if (!head){ return nullptr; }
+        head->next = removeElements(head->next, val);
+        if (head->val == val){ return head->next; }
+        else{ return head; }
     }
 };
 // @lc code=end

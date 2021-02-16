@@ -15,13 +15,23 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+// #include<stack>
+// using namespace std;
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if (!head){ return nullptr; }
-        ListNode *result = reverseList(head->next);
-        reverseList(head->next)->next = head;
-        return result;
+        if (!head){ return nullptr;}
+        stack<ListNode *> list;
+        while (head){ list.push(head); head = head->next; }
+        ListNode *header = list.top();
+        while (true){
+            ListNode *temp = list.top();
+            list.pop();
+            if (list.size()){ temp->next = list.top(); }
+            else{ temp->next = nullptr; break; }
+        }
+        return header;
     }
 };
 // @lc code=end
