@@ -2,6 +2,7 @@
     "files.associations": {
         "vector": "cpp",
         "xutility": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "unordered_set": "cpp"
     }
 }
