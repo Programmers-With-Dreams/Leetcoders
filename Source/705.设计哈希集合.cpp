@@ -9,8 +9,10 @@ class MyHashSet {
 public:
     /** Initialize your data structure here. */
     MyHashSet() {
-        
+        datas = new int[10000];
     }
+
+    ~MyHashSet() { delete [] datas; }
     
     void add(int key) {
 
@@ -24,6 +26,9 @@ public:
     bool contains(int key) {
 
     }
+private:
+    int *datas;
+    int hash(int key);
 };
 
 /**
