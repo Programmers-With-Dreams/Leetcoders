@@ -45,6 +45,8 @@
 
 ​					k已经在for中++了，还++
 
+20210317 Deque使用LinkedList或者ArrayDeque实现
+
 ### 3. 阶段总结
 
 ### 第四周
