@@ -47,6 +47,8 @@
 
 20210317 Deque使用LinkedList或者ArrayDeque实现
 
+20210318 ArrayList删除之后自动补位
+
 ### 3. 阶段总结
 
 ### 第四周
